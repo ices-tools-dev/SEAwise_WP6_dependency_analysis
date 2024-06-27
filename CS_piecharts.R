@@ -34,10 +34,14 @@ igndir <- c("./drafts_to_be_ignored_for_git")
 theme_set(theme_bw())
 
 # LOAD DATA ####
+#????
+#???? => RDBES DATA NOT UPLOADED TO GIT
 lst_files <- list.files(paste0(datadir,"/fisheries/CONFIDENTIAL_SEAwise_landings_effort"),
                         pattern = ".csv$",  # file names ending with csv
                         recursive = T,      # search subdirectories
                         full.names = T)     # return the full path
+
+#????
 ##CE data ----
 ##> reading ce data ====
 ce <- lapply(lst_files[grepl("CE ",lst_files)], fread)
